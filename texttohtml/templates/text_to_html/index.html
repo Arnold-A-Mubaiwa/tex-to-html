@@ -1,0 +1,18 @@
+<div>
+<div>
+{{ form.media }}
+{{ form.as_p }}
+</div>
+<input type='submit' class='' value='Submit' onclick='TextConvert()'>
+</div>
+<div>
+<textarea id='htmldata'></textarea>
+</div>
+
+<script>
+    function TextConvert(){
+        var x = CKEDITOR.instances["id_body"].getData();
+        var y = document.getElementById('htmldata');
+        y.innerHTML=x;
+    }
+</script>
